@@ -1,16 +1,21 @@
 {
   "loc.friendlyName": "Computergruppenaktionen",
-  "loc.helpMarkDown": "Aktionen wie Starten, Beenden oder Löschen für eine Computergruppe ausführen",
-  "loc.description": "Computergruppenaktionen",
+  "loc.helpMarkDown": "[Weitere Informationen](https://github.com/Microsoft/vso-agent-tasks/blob/master/Tasks/PerformActionOnMachineGroup/README.md)",
+  "loc.description": "Aktionen wie \"Starten\", \"Beenden\", \"Löschen\" für eine Computergruppe ausführen",
   "loc.instanceNameFormat": "Computergruppe $(Action)",
+  "loc.input.label.ConnectedServiceName": "Azure-Abonnement",
+  "loc.input.help.ConnectedServiceName": "Das Azure-Abonnement, in dem die Ressourcengruppe bereitgestellt wird. Optional für bereits erstellte Computergruppen.",
   "loc.input.label.MachineGroupName": "Computergruppe",
   "loc.input.help.MachineGroupName": "Name der Zielcomputergruppe, für die die Aktion ausgeführt werden soll",
   "loc.input.label.Action": "Aktion",
   "loc.input.help.Action": "Für die Computer oder die Computergruppe auszuführende Aktion.",
-  "loc.input.label.Filters": "Auf Computer anwenden",
-  "loc.input.help.Filters": "Standardmäßig gelten Aktionen für alle Computer in einer Computergruppe. Um eine Aktion auf eine Teilmenge von Computern anzuwenden, geben Sie Tags oder Computernamen wie die folgenden an: Rolle: Web, Rolle: Test, BudgetIT01. Bei Blockieraktionen und beim Aufheben von Blockierungen werden keine Filter angewendet.",
+  "loc.input.label.ResourceFilteringMethod": "Computer auswählen nach",
+  "loc.input.label.Filters": "Filterkriterien",
+  "loc.input.help.Filters": "Geben Sie eine Liste von Computern (z. B. Computer1, Computer2) oder Tags (z. B. Role:DB;OS:Win8.1) an. Alle Computer mit mindestens einem der Tags werden zurückgegeben. Standardmäßig werden alle Computer in der Computergruppe zurückgegeben. Filter werden nicht für Blockierungsaktionen bzw. Aktionen zum Aufheben der Blockierung angewendet.",
   "loc.input.label.BlockedFor": "Blockieren für",
   "loc.input.help.BlockedFor": "Eine Computergruppe für eine Instanz wie einen bestimmten Build oder für die Definition, d. h. für alle Instanzen der Definition blockieren",
   "loc.input.label.TimeInHours": "Zeit in Stunden",
-  "loc.input.help.TimeInHours": "Die Anzahl der Stunden, für die die Computer blockiert werden. Der Standardwert ist 0 und bedeutet, dass die Computer unbegrenzt blockiert werden."
+  "loc.input.help.TimeInHours": "Die Anzahl der Stunden, für die die Computer blockiert werden. Der Wert 0 gibt an, dass die Computer unbegrenzt blockiert werden.",
+  "loc.input.label.WaitTimeInMinutes": "Wartezeit in Minuten (falls blockiert)",
+  "loc.input.help.WaitTimeInMinutes": "Die Länge der Wartezeit für die Aufhebung der der Computergruppenblockierung, wenn diese bereits blockiert ist. Der Standardwert ist 30 Minuten."
 }

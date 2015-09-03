@@ -1,16 +1,21 @@
 {
   "loc.friendlyName": "Actions du groupe d'ordinateurs",
-  "loc.helpMarkDown": "Effectuer des actions telles que start, stop et delete sur un groupe d'ordinateurs",
-  "loc.description": "Actions du groupe d'ordinateurs",
+  "loc.helpMarkDown": "[Plus d'informations](https://github.com/Microsoft/vso-agent-tasks/blob/master/Tasks/PerformActionOnMachineGroup/README.md)",
+  "loc.description": "Effectuer des actions telles que démarrer, arrêter et supprimer sur un groupe de machines",
   "loc.instanceNameFormat": "$(Action) groupe d'ordinateurs ",
+  "loc.input.label.ConnectedServiceName": "Abonnement Azure",
+  "loc.input.help.ConnectedServiceName": "Abonnement Azure dans lequel le groupe de ressources est déployé. Facultatif pour un groupe de machines existant.",
   "loc.input.label.MachineGroupName": "Groupe d'ordinateurs",
   "loc.input.help.MachineGroupName": "Nom du groupe d'ordinateurs cible sur lequel effectuer l'action.",
   "loc.input.label.Action": "Action",
   "loc.input.help.Action": "Action à effectuer sur les ordinateurs ou le groupe d'ordinateurs.",
-  "loc.input.label.Filters": "Appliquer aux ordinateurs",
-  "loc.input.help.Filters": "Les actions s'appliquent généralement à tous les ordinateurs d'un groupe d'ordinateurs. Pour appliquer l'action à un sous-ensemble d'ordinateurs, spécifiez des balises ou des noms d'ordinateurs, par exemple, Role: Web, Role: Test, BudgetIT01. Les filtres ne sont pas appliqués pour les actions de blocage ou de déblocage.",
+  "loc.input.label.ResourceFilteringMethod": "Sélectionner les machines par",
+  "loc.input.label.Filters": "Critères de filtre",
+  "loc.input.help.Filters": "Fournissez une liste de noms de machines tels que MaMachine1, MaMachine2, ou de balises telles que Role:DB;OS:Win8.1. Retourne les machines associées à l'une des balises. Par défaut, toutes les machines du groupe sont concernées. Les filtres ne sont pas appliqués pour les actions de blocage et déblocage.",
   "loc.input.label.BlockedFor": "Bloquer pendant",
   "loc.input.help.BlockedFor": "Bloquez un groupe d'ordinateurs pour une instance (par ex., une build particulière) ou pour la définition (par ex., pour toutes les instances de la définition).",
   "loc.input.label.TimeInHours": "Durée en heures",
-  "loc.input.help.TimeInHours": "Nombre d'heures pendant lequel les ordinateurs seront bloqués. La valeur par défaut est 0, ce qui bloque les ordinateurs indéfiniment."
+  "loc.input.help.TimeInHours": "Nombre d'heures pendant lesquelles les machines seront bloquées. La valeur 0 indique qu'elles seront bloquées indéfiniment.",
+  "loc.input.label.WaitTimeInMinutes": "Temps d'attente en minutes (si bloqué)",
+  "loc.input.help.WaitTimeInMinutes": "Si le groupe de machines est bloqué, nombre de minutes d'attente avant son déblocage. Par défaut, 30 minutes"
 }

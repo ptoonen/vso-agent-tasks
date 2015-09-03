@@ -1,16 +1,21 @@
 {
   "loc.friendlyName": "컴퓨터 그룹 작업",
-  "loc.helpMarkDown": "컴퓨터 그룹에 대해 시작, 중지, 삭제와 같은 작업을 수행합니다.",
-  "loc.description": "컴퓨터 그룹 작업",
+  "loc.helpMarkDown": "[자세한 정보](https://github.com/Microsoft/vso-agent-tasks/blob/master/Tasks/PerformActionOnMachineGroup/README.md)",
+  "loc.description": "컴퓨터 그룹에 대해 시작, 중지, 삭제 등의 작업 수행",
   "loc.instanceNameFormat": "컴퓨터 그룹 $(Action)",
+  "loc.input.label.ConnectedServiceName": "Azure 구독",
+  "loc.input.help.ConnectedServiceName": "리소스 그룹이 배포되는 Azure 구독입니다. 기존 컴퓨터 그룹의 경우 선택 사항입니다.",
   "loc.input.label.MachineGroupName": "컴퓨터 그룹",
   "loc.input.help.MachineGroupName": "작업을 수행할 대상 컴퓨터 그룹의 이름입니다.",
   "loc.input.label.Action": "작업",
   "loc.input.help.Action": "컴퓨터나 컴퓨터 그룹에서 수행할 작업입니다.",
-  "loc.input.label.Filters": "컴퓨터에 적용",
-  "loc.input.help.Filters": "기본적으로 작업은 컴퓨터 그룹의 모든 컴퓨터에 적용됩니다. 작업을 일부 컴퓨터에 적용하려면 Role: Web, Role: Test, BudgetIT01과 같은 태그나 컴퓨터 이름을 입력하세요. 차단 또는 차단 해제 작업에 대해서는 필터가 적용되지 않습니다.",
+  "loc.input.label.ResourceFilteringMethod": "컴퓨터 선택 기준",
+  "loc.input.label.Filters": "필터 조건",
+  "loc.input.help.Filters": "컴퓨터 이름(예: MyMachine1, MyMachine2) 또는 태그(예: Role:DB;OS:Win8.1)의 목록을 제공합니다. 이러한 태그 중 하나를 포함하는 컴퓨터가 반환됩니다. 기본값은 컴퓨터 그룹에 있는 모든 컴퓨터입니다. 차단 또는 차단 해제 작업에는 필터가 적용되지 않습니다.",
   "loc.input.label.BlockedFor": "블록 용도:",
   "loc.input.help.BlockedFor": "특정 빌드와 같은 인스턴스나, 정의, 즉 모든 정의 인스턴스에 대해 컴퓨터 그룹을 차단합니다.",
   "loc.input.label.TimeInHours": "시간(시)",
-  "loc.input.help.TimeInHours": "컴퓨터를 차단될 시간(시)입니다. 기본값은 0이며 이 경우 컴퓨터가 무기한 차단됩니다."
+  "loc.input.help.TimeInHours": "컴퓨터를 차단할 시간 수입니다. 값이 0이면 컴퓨터가 무기한 차단됩니다.",
+  "loc.input.label.WaitTimeInMinutes": "대기 시간(분)(차단된 경우)",
+  "loc.input.help.WaitTimeInMinutes": "컴퓨터 그룹이 이미 차단된 경우 컴퓨터 그룹을 차단 해제하기 위해 기다려야 하는 분 수입니다. 기본값은 30분입니다."
 }

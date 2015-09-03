@@ -1,16 +1,21 @@
 {
   "loc.friendlyName": "计算机组操作",
-  "loc.helpMarkDown": "对计算机组执行操作(如启动、停止、删除)",
-  "loc.description": "计算机组操作",
+  "loc.helpMarkDown": "[详细信息](https://github.com/Microsoft/vso-agent-tasks/blob/master/Tasks/PerformActionOnMachineGroup/README.md)",
+  "loc.description": "对计算机组执行启动、停止、删除等操作",
   "loc.instanceNameFormat": "$(Action) 计算机组 ",
+  "loc.input.label.ConnectedServiceName": "Azure 订阅",
+  "loc.input.help.ConnectedServiceName": "在其中部署资源组的 Azure 订阅。对于预先存在的计算机组为可选项。",
   "loc.input.label.MachineGroupName": "计算机组",
   "loc.input.help.MachineGroupName": "用于执行操作的目标计算机组的名称。",
   "loc.input.label.Action": "操作",
   "loc.input.help.Action": "要对计算机或计算机组执行的操作。",
-  "loc.input.label.Filters": "应用于计算机",
-  "loc.input.help.Filters": "默认情况下，操作应用于计算机组中的所有计算机。要将操作应用于计算机的子集，请提供标记或计算机名(如角色: Web、角色: 测试、BudgetIT01)。筛选器不适用于阻止或取消阻止操作。",
+  "loc.input.label.ResourceFilteringMethod": "计算机选择依据",
+  "loc.input.label.Filters": "筛选条件",
+  "loc.input.help.Filters": "提供计算机名列表(如 MyMachine1, MyMachine2)或标记列表(如 Role:DB;OS:Win8.1)。返回具有任一标记的计算机。默认为计算机组中的所有计算机。筛选器不适用于阻止或解除阻止操作。",
   "loc.input.label.BlockedFor": "针对以下对象进行阻止",
   "loc.input.help.BlockedFor": "针对实例(如特定生成)或针对定义(即定义的所有实例)阻止计算机组。",
   "loc.input.label.TimeInHours": "时间(以小时为单位)",
-  "loc.input.help.TimeInHours": "将阻止计算机的小时数。默认值为 0，这会无限期阻止计算机。"
+  "loc.input.help.TimeInHours": "将阻止计算机的小时数。值 0 表示将无限期阻止计算机。",
+  "loc.input.label.WaitTimeInMinutes": "以分钟为单位的等待时间(如果已阻止)",
+  "loc.input.help.WaitTimeInMinutes": "如果已阻止计算机组，它表示解除对计算机组的阻止需要等待的分钟数。默认为 30 分钟"
 }

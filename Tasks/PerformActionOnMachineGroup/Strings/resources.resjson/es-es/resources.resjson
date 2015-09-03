@@ -1,16 +1,21 @@
 {
   "loc.friendlyName": "Acciones de grupo de equipos",
-  "loc.helpMarkDown": "Realice acciones como iniciar, detener o eliminar en un grupo de equipos",
-  "loc.description": "Acciones de grupo de equipos",
-  "loc.instanceNameFormat": "$(Action) grupo de equipos ",
+  "loc.helpMarkDown": "[Más información](https://github.com/Microsoft/vso-agent-tasks/blob/master/Tasks/PerformActionOnMachineGroup/README.md)",
+  "loc.description": "Realiza acciones como iniciar, detener o eliminar elementos en un grupo de máquinas",
+  "loc.instanceNameFormat": "$(Action) grupo de máquinas",
+  "loc.input.label.ConnectedServiceName": "Suscripción a Azure",
+  "loc.input.help.ConnectedServiceName": "Suscripción de Azure en la que está implementado el Grupo de recursos. Es opcional para los grupos de máquinas preexistentes.",
   "loc.input.label.MachineGroupName": "Grupo de equipos",
   "loc.input.help.MachineGroupName": "Nombre del grupo de equipos de destino en el que se va a realizar la acción.",
   "loc.input.label.Action": "Acción",
   "loc.input.help.Action": "Acción que se va a realizar en los equipos de un grupo de equipos.",
-  "loc.input.label.Filters": "Aplicar a equipos",
-  "loc.input.help.Filters": "Las acciones se aplican de forma predeterminada a todos los equipos del grupo de equipos. Para aplicar una acción a un subconjunto de equipos, especifique las etiquetas o los nombres de equipo, como Rol: Web, Rol: Prueba, BudgetIT01. En las acciones de bloqueo y desbloqueo no se usan filtros.",
+  "loc.input.label.ResourceFilteringMethod": "Seleccionar máquinas por",
+  "loc.input.label.Filters": "Criterios de filtro",
+  "loc.input.help.Filters": "Proporcione una lista de nombres de máquina, por ejemplo, MiMáquina1, MiMáquina2 o etiquetas como Role:DB;OS:Win8.1. Esto devolverá las máquinas que tengan alguna de las etiquetas. El valor predeterminado es el de todas las máquinas que estén en el grupo de máquinas. Los filtros no se aplican para bloquear o desbloquear acciones.",
   "loc.input.label.BlockedFor": "Bloquear para",
   "loc.input.help.BlockedFor": "Bloquee un grupo de equipos, ya sea para una instancia (como una compilación concreta) o para la definición (es decir, para todas las instancias de la definición).",
   "loc.input.label.TimeInHours": "Tiempo en horas",
-  "loc.input.help.TimeInHours": "Número de horas durante las que los equipos van a estar bloqueados. El valor predeterminado es 0, y esto hace que los equipos estén bloqueados indefinidamente."
+  "loc.input.help.TimeInHours": "Número de horas durante las cuales las máquinas van a estar bloqueadas. El valor 0 indica que las máquinas estarán bloqueadas indefinidamente.",
+  "loc.input.label.WaitTimeInMinutes": "Tiempo de espera en minutos (si está bloqueada)",
+  "loc.input.help.WaitTimeInMinutes": "Si el grupo de máquinas ya está bloqueado, el número de minutos que hay que esperar para que se desbloquee el grupo de máquinas. El valor predeterminado son 30 minutos"
 }
